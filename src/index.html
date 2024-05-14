@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Brewery</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container mx-auto p-10">
+      <h1 class="text-4xl font-bold mb-3">Breweries</h1>
+
+      <div id="searchContainer" class="bg-orange-100 p-5 mb-5 flex gap-2">
+        <input
+          id="searchInput"
+          class="ring-1 rounded px-3 py-1 w-full"
+          type="text"
+          placeholder="Search for Brewery" />
+        <button
+          onclick="searchBreweries()"
+          class="bg-yellow-600 hover:bg-yellow-700 hover:transition-all text-white rounded px-3 py-1">
+          Search
+        </button>
+      </div>
+
+      <button
+        onclick="fetchAllBreweries()"
+        class="bg-yellow-600 hover:bg-yellow-700 hover:transition-all text-white rounded px-3 py-1 mr-1">
+        Show Breweries
+      </button>
+      <button
+        onclick="fetchRandomBrewery()"
+        class="bg-yellow-600 hover:bg-yellow-700 hover:transition-all text-white rounded px-3 py-1">
+        Random Brewery
+      </button>
+
+      <div id="breweryContainer"></div>
+      <div
+        id="modal"
+        class="hidden fixed z-10 top-0 left-0 w-full h-full overflow-auto bg-black bg-opacity-75">
+        <div
+          id="modalInner"
+          class="relative bg-white w-2/3 mx-auto my-20 p-10 shadow-md">
+          <span
+            onclick="closeModal()"
+            class="close absolute top-5 right-8 text-4xl cursor-pointer"
+            >×</span
+          >
+          <div id="modalContent"></div>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
