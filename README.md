@@ -7,4 +7,4 @@
 <li>Also search functionality was added.</li>
 </ul>
 
-API used: https://www.openbrewerydb.org/documentation/
+API used: https://www.openbrewerydb.org
